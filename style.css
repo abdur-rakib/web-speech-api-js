@@ -10,6 +10,10 @@ body {
     background-color: #141414;
 }
 
+.row  {
+    height: 94vh;
+}
+
 h1 {
     padding: 20px 10px;
     font-weight: 400;
@@ -70,3 +74,9 @@ textarea {
     background: slateblue;
     cursor: pointer;
   }
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
