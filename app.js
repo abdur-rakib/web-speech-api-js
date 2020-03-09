@@ -9,6 +9,7 @@ const rate = document.querySelector("#rate");
 const rateValue = document.querySelector("#rate-value");
 const pitch = document.querySelector("#pitch");
 const pitchValue = document.querySelector("#pitch-value");
+const body = document.querySelector("body");
 
 
 // init voices array
@@ -46,23 +47,29 @@ getVoices();
 
 // Speak
 const speak = () => {
+    // Add background
+    body.style.background = 'url(../img/wave.gif)';
+    body.style.backgroundSize = '100% 100%'
+    body.style.backgroundRepeat = 'repeat-x'
+    body.style.backgroundColor = '#141414'
     // check if speaking
-    if(synth.speaking) {
+    if (synth.speaking) {
         alert("Already Speaking")
-        return;
-    } 
-    if(textInput.value !== '') {
+    }
+    if (textInput.value !== '') {
         // Get speak text
         const speakText = new SpeechSynthesisUtterance(textInput.value);
         // Speak end
         speakText.onend = e => {
+            // Add background
+
+            body.style.background = '#141414'
             console.log("Done speaking");
         }
 
         // speak error
-
         speakText.onerror = e => {
-            console.error("Something went wrong");
+            alert("Some thing Went wrong!!!")
         }
 
         // Selected voice
@@ -70,7 +77,7 @@ const speak = () => {
         // console.log(selectedVoice);
 
         voices.forEach(voice => {
-            if(voice.name === selectedVoice) {
+            if (voice.name === selectedVoice) {
                 speakText.voice = voice;
             }
         });
@@ -82,6 +89,9 @@ const speak = () => {
         // SPeak
 
         synth.speak(speakText);
+    } else {
+        alert("Type Something")
+        body.style.background = '#141414'
     }
 }
 
