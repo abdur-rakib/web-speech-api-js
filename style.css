@@ -1,0 +1,30 @@
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    /* font-weight: 500; */
+
+}
+
+.form-control {
+    border: transparent;
+    outline: transparent;
+    border-radius: 0;
+}
+.form-control:focus {
+    border: transparent;
+    outline: transparent;
+    box-shadow: none;
+}
+.btn {
+    box-shadow: none;
+    border: transparent;
+    outline: transparent;
+    border-radius: 0;
+    background-color: white;
+}
+
+.btn:focus {
+    box-shadow: none;
+    border: transparent;
+    outline: transparent;
+}
