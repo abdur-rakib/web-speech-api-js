@@ -11,6 +11,8 @@ const pitch = document.querySelector("#pitch");
 const pitchValue = document.querySelector("#pitch-value");
 const body = document.querySelector("body");
 
+const pause = document.querySelector("#pause");
+
 
 // init voices array
 let voices = [];
