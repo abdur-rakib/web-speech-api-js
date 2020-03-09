@@ -50,7 +50,7 @@ getVoices();
 // Speak
 const speak = () => {
     // Add background
-    body.style.background = 'url(../img/wave.gif)';
+    body.style.background = 'url(./img/wave.gif)';
     body.style.backgroundSize = '100% 100%'
     body.style.backgroundRepeat = 'repeat-x'
     body.style.backgroundColor = '#141414'
