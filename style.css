@@ -49,6 +49,9 @@ h1 {
     background-color: slateblue;
     border-radius: 0;
 }
+textarea {
+    resize: none;
+}
 
 .myRange {
     -webkit-appearance: none;
